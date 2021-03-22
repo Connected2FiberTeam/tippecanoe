@@ -5,30 +5,15 @@ Install dependicies
 
 	sudo apt-get install build-essential libsqlite3-dev zlib1g-dev
 
-Install git
+Use scripts to build for the local environment OS
 ```
 
-	sudo apt-get install git
+	tools/build.sh
 
-Download tippecanoe
+Package the application
 ```
 
-	git clone https://github.com/mapbox/tippecanoe.git
-
-Go into Root Directory
-```
-
-	cd tippecanoe
-
-Give make command
-```
-
-	sudo make
-
-Finally, do install
-```
-
-	sudo make install
+	tools/package.sh
 
 
 ### How to install Tippecanoe in Centos
@@ -55,43 +40,18 @@ Install zlib
 
 	yum install zlib-devel
 
-Install git
+Use scripts to build for the local environment OS
 ```
 
-	yum install git
+    tools/build.sh
 
-Clone the repository
+Package the application
 ```
 
-	git clone https://github.com/mapbox/tippecanoe.git
-
-Go inside root directory
-```
-
-	cd tippecanoe
-
-Give make command
-```
-
-	make
-
-Finally, Install tippecanoe
-```
-
-	make install
+    tools/package.sh
 
 Check version
 ```
 
 	tippecanoe -v
 	
-```
-
-Optional:
-1. If you run as root user execute the below command and restart the server to reflect the changes
-
-```sh
-
-	export PATH=/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/usr/local/bin
-	
-```
